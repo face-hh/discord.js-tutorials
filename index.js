@@ -14,6 +14,7 @@ client.on('messageCreate', async message => {
     };
     
     if(isCommand('soundboard')){
+        
         const channel = message.member.voice.channel;
         if(!channel) return message.channel.send('Bro join a voice channel smh :wink:');
 
