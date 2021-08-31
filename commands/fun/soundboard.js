@@ -1,5 +1,4 @@
 const voiceDiscord = require('@discordjs/voice');
-
 module.exports = {
 	name: 'soundboard',
 	aliases: ['sd'],
