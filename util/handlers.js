@@ -1,4 +1,7 @@
 const fs = require('fs');
+const util = require('util');
+const { glob } = require('glob');
+const globPromise = util.promisify(glob);
 
 module.exports = async (client) => {
 	const eventFiles = fs.readdirSync('./events/').filter((file) => file.endsWith('.js'));
@@ -31,4 +34,16 @@ module.exports = async (client) => {
 			//               RED              MAGENTA       CYAN                   WHITE               RESET TO DEFAULT COLOR
 		}
 	}
+
+	const slashCommands = await globPromise(
+		`${process.cwd()}/scommands/*/*.js`,
+	);
+
+	slashCommands.map((value) => {
+		const file = require(value);
+		if (!file?.name) return;
+		client.scommands.set(file.name, file);
+		client.scommandsArray.push(file);
+	});
+
 };

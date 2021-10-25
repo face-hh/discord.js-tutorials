@@ -6,9 +6,9 @@ require('dotenv').config();
 const client = new Discord.Client({ intents: 32767 });
 
 client.commands = new Discord.Collection();
+client.scommands = new Discord.Collection();
+client.scommandsArray = [];
 client.aliases = new Discord.Collection();
-
-require('./util/handlers')(client);
 
 const mongoose = require('mongoose');
 
@@ -19,3 +19,5 @@ mongoose.connect(process.env.MONGO, {
 });
 
 client.login(process.env.token);
+
+require('./util/handlers')(client);
