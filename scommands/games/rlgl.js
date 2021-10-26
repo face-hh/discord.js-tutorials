@@ -67,7 +67,7 @@ module.exports = {
 			},
 		];
 
-		interaction.followUp({
+		interaction.reply({
 			content: positions[data.color].join('\n').replace(/,/g, ''),
 			components: componentsArray,
 			ephemeral: true,
