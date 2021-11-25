@@ -3,7 +3,24 @@ module.exports = async (client, message) => {
 
 	const prefix = '?';
 
-	if(!message.content.startsWith(prefix)) return;
+	if(!message.content.startsWith(prefix)) {
+		if(client.oneWordStoryData[message.channel.id]) {
+			if(client.oneWordStoryData[message.channel.id].lastUser === message.author.id || client.util.isInvalidWord(message.content) === true) {
+				return message.delete();
+			}
+			else {
+				client.oneWordStoryData[message.channel.id].lastUser === message.author.id;
+				client.oneWordStoryData[message.channel.id].words.push(message.content);
+
+				if(message.content.includes('.')) {
+					message.channel.send(`${client.oneWordStoryData[message.channel.id].words.join(' ')}` +
+					'------------------------------------------------------');
+
+					client.oneWordStoryData[message.channel.id] = { words: [], lastUser: null };
+				}
+			}
+		}
+	}
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 

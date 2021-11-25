@@ -1,8 +1,9 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-inline-comments */
 module.exports = {
 	name: 'rlgl',
 	description: 'Play green line, red line in Discord!',
-	execute: async (client, interaction) => {
+	execute: async (_client, interaction) => {
 
 		const grass = '<:gressxd:897167292591394856>'; // https://cdn.discordapp.com/emojis/897167292591394856.png
 		const square = '<:squidgamesquare:897165380873752576>'; // https://cdn.discordapp.com/emojis/897165380873752576.png

@@ -1,7 +1,11 @@
 {
+  "engines": {
+    "node": ">=v17.1.0"
+  },
   "dependencies": {
     "@discordjs/voice": "^0.6.0",
     "canvas": "^2.8.0",
+    "check-word": "^1.1.0",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
@@ -9,7 +13,11 @@
     "libsodium-wrappers": "^0.7.9",
     "mongoose": "^5.13.7",
     "opusscript": "^0.0.8",
+    "profanity-js": "^0.1.4",
     "yt-search": "^2.10.1",
     "ytdl-core": "^4.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0"
   }
 }

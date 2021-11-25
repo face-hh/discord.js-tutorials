@@ -1,4 +1,5 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-inline-comments */
 module.exports = {
 	name: 'rlgl',
 	aliases: ['redlinegreenline'],
@@ -109,7 +110,7 @@ module.exports = {
 				const thearraytofind = positions[color].filter(x => Array.isArray(x));
 				const i = positions[color].filter(x => Array.isArray(x)).map(x => positions[color].indexOf(x))[0];
 
-                const dataBefore = positions[color][i - 1];
+				const dataBefore = positions[color][i - 1];
 				positions[color][i - 1] = thearraytofind;
 				positions[color][i] = dataBefore;
 			});

@@ -9,6 +9,8 @@ client.commands = new Discord.Collection();
 client.scommands = new Discord.Collection();
 client.scommandsArray = [];
 client.aliases = new Discord.Collection();
+client.oneWordStoryData = {};
+client.util = require('./util/util');
 
 const mongoose = require('mongoose');
 
