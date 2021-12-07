@@ -1,7 +1,7 @@
 module.exports = async (client, interaction) => {
 	if (interaction.isCommand()) {
 		try {
-			await interaction.deferReply({ ephemeral: false });
+			await interaction.deferReply({ ephemeral: true });
 
 			const cmd = client.scommands.get(interaction.commandName);
 			const args = [];

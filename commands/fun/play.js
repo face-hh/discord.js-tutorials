@@ -6,7 +6,7 @@ module.exports = {
 		const ytdl = require('ytdl-core');
 		const url = args[0];
 
-		if(!url) return message.channel.send('No url provided');
+		if(!url) return message.channel.send({ content : 'No url provided' });
 
 		const Discord = require('@discordjs/voice');
 		const stream = ytdl(url, { filter: 'audioonly' });
