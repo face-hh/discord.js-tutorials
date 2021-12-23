@@ -12,6 +12,7 @@
     "fs": "^0.0.1-security",
     "libsodium-wrappers": "^0.7.9",
     "mongoose": "^5.13.7",
+    "node-fetch": "^2.6.6",
     "opusscript": "^0.0.8",
     "pretty-ms": "^7.0.1",
     "profanity-js": "^0.1.4",
