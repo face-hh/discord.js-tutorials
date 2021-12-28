@@ -31,6 +31,23 @@ function isInvalidWord(input) {
 	return false;
 }
 
+function shuffleArray(arr) {
+	for (let i = arr.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[arr[i], arr[j]] = [arr[j], arr[i]];
+	}
+	return arr;
+}
+function getAllIndexes(arr, val) {
+	const indexes = [];
+	let i = -1;
+	while ((i = arr.indexOf(val, i + 1)) != -1) {
+		indexes.push(i);
+	}
+	return indexes;
+}
 module.exports = {
 	isInvalidWord,
+	shuffleArray,
+	getAllIndexes,
 };
